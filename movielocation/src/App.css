@@ -1,4 +1,20 @@
-
-.mapouter{position:relative;text-align:right;width:600px;height:400px;}
-.gmap_canvas {overflow:hidden;background:none!important;width:600px;height:400px;}
-.gmap_iframe {width:600px!important;height:400px!important;}
+body{
+  background-color: rgb(194, 195, 196);
+ 
+}
+.mapouter{position:relative;text-align:right;width:600px;height:400px;margin-top: 200px;margin-left: 30%;}
+#gmap_canvas {overflow:hidden;background:none!important;width:600px;height:400px;}
+#gmap_iframe {width:600px!important;height:400px!important;}
+.input{
+  margin: auto;
+  font-size: 30px;
+  text-align:center
+}
+#use-autocomplete-demo-listbox{
+  width:40%;
+  margin-left:28%;
+  background-color: orange;
+}
+#but{
+  height: 32px;
+}

@@ -104,6 +104,7 @@ export const Searchmovie = () => {
 
             Search Movie shooting Location
             </marquee>
+            <h4>  {searchvalue1?searchvalue1: "no location found"}</h4>
         <Input  {...getInputProps()}  width="40%" height="30px" borderRadius="5px"   /> 
        <button id="but" onClick={com}>Search</button>
             </Label>
@@ -130,7 +131,7 @@ export const Searchmovie = () => {
 
 
 
-                   <h2>  {searchvalue1?searchvalue1: "no location found"}</h2>
+                  
                      </div>
                      <div class="mapouter">
             <div id="gmap_canvas">

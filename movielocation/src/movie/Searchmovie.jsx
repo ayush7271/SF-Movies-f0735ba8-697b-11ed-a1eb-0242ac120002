@@ -13,12 +13,7 @@ const Label = styled('label')({
     display: 'block',
   });
   
-//   const Input = styled('input')(({ theme }) => ({
-//     width: 200,
-//     backgroundColor: theme.palette.mode === 'light' ? '#fff' : '#000',
-//     color: theme.palette.mode === 'light' ? '#000' : '#fff',
-//   }));
-  
+
   
   const Listbox = styled('ul')(({ theme }) => ({
     width: 200,
@@ -53,11 +48,11 @@ export const Searchmovie = () => {
     const dispatch=useDispatch()
     
     const data=useSelector(store=>store.resData)
-    console.log(data,"t")
+    // console.log(data,"t")
     const handelsearch=()=>{
         set_search_value1(search_value)
     }
-    console.log(searchvalue1,"this")
+   
   
     const gettodo=()=>{
         dispatch(datarequest())
@@ -70,6 +65,20 @@ export const Searchmovie = () => {
     useEffect(() => {
       gettodo()
     }, [])
+    const [user,setuser]=useState([])
+    
+    const getdata=()=>{
+       
+
+            return axios.get("https://your-api-project-name-ayush.herokuapp.com/user").then((res)=>
+            setuser(res.data)
+            ).catch((e)=>console.log(e))
+       
+    }
+    useEffect(() => {
+        getdata()
+    }, [])
+  
   
 
     const {
@@ -105,6 +114,7 @@ export const Searchmovie = () => {
             Search Movie shooting Location
             </marquee>
             <h4>  {searchvalue1?searchvalue1: "no location found"}</h4>
+           
         <Input  {...getInputProps()}  width="40%" height="30px" borderRadius="5px"   /> 
        <button id="but" onClick={com}>Search</button>
             </Label>
@@ -117,27 +127,20 @@ export const Searchmovie = () => {
             <>
               <li {...getOptionProps({ option })} onClick={()=>
                 {set_search_value1(option.locations) 
-                    com()
+                  com()
                 }}>{option.title  } </li>   
                 
                 </>
-         
-              
-        
           ))}
         </Listbox>
       ) : null}
-
-
-
-
-                  
-                     </div>
+                    </div>
                      <div class="mapouter">
             <div id="gmap_canvas">
                 <iframe id="gmap_iframe" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=600&amp;height=400&amp;hl=en&amp;&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe>
                 </div>
                 </div>
+<p style={{direction:"rtl"}}>user visit <span><h3>{user.length}</h3></span> </p>
     </div>
   )
 }

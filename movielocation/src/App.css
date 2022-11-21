@@ -2,7 +2,14 @@ body{
   background-color: rgb(194, 195, 196);
  
 }
-.mapouter{position:relative;text-align:right;width:600px;height:400px;margin-top: 200px;margin-left: 30%;}
+.home{
+  width: 80%;
+  height: 500px;
+  background-color: rgb(180, 166, 140);
+  margin: auto;
+  margin-top: 200px ;
+}
+.mapouter{position:relative;text-align:right;width:600px;height:400px;margin-top:100px;margin-left: 30%;}
 #gmap_canvas {overflow:hidden;background:none!important;width:600px;height:400px;}
 #gmap_iframe {width:600px!important;height:400px!important;}
 .input{

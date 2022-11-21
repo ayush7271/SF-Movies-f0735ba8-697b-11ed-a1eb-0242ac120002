@@ -2,18 +2,17 @@ import logo from './logo.svg';
 import './App.css';
 import { Searchmovie } from './movie/Searchmovie';
 import { Navbar } from './navbar/Navbar';
-import {UseAutocomplete} from './movie/UseAutocomplete';
+
+import { Mainroute } from './Mainroute/Mainroute';
 
 function App() {
 
   return (
     <div className="App">
       <Navbar/>
-      <Searchmovie/>
-      {/* <UseAutocomplete/> */}
-    
- 
-    </div>
+      {/* <Searchmovie/> */}
+      <Mainroute/>
+   </div>
   );
 }
 

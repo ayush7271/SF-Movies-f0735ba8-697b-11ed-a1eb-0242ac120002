@@ -1,4 +1,4 @@
-# movie+search  
+# moviesearch  
 # About this project: 🙌
 
 This is a individual project,
